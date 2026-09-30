@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="lcturGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628" />
+      <stop offset="100%" stop-color="#132744" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8D5A8" />
+      <stop offset="100%" stop-color="#D4A853" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle / Rounded Box -->
+  <rect width="64" height="64" rx="16" fill="url(#lcturGrad)" />
+  
+  <!-- Subtle Nautical Compass / Horizon Arc -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+  <path d="M12 36 Q32 20 52 36" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Brand Monogram LC -->
+  <text x="32" y="40" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">LC</text>
+  
+  <!-- Compass Star / Spark -->
+  <polygon points="32,14 34,20 40,22 34,24 32,30 30,24 24,22 30,20" fill="url(#goldGrad)" />
+</svg>
