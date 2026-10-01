@@ -2879,9 +2879,9 @@ img {
         color: #ffffff !important;
     }
 
-    body {
-        padding-top: 42px;
-    }
+   body {
+    padding-top: 0 !important;
+}
 }
 
 /* Corrigir foto e película do hero no celular */
