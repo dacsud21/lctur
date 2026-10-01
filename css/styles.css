@@ -2905,3 +2905,8 @@ img {
         background-position: center !important;
     }
 }
+
+/* Subir a setinha do banner no celular e no computador */
+.hero__scroll-indicator {
+    bottom: 65px !important;
+}
