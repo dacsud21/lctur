@@ -2836,12 +2836,10 @@ img {
     }
 
     .header__logo .logo__image {
-        width: 42px !important;
+        width: 50px !important;
     }
 
-    .header.scrolled .header__container {
-        min-height: 40px !important;
-    }
+    
 }
 
 /* Ajuste do conteúdo do hero somente no celular */
