@@ -2883,3 +2883,25 @@ img {
         padding-top: 42px;
     }
 }
+
+/* Corrigir foto e película do hero no celular */
+@media (max-width: 768px) {
+    .hero,
+    .hero__slide {
+        overflow: hidden !important;
+    }
+
+    .hero__slide .hero__background,
+    .hero__slide .hero__overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+    }
+
+    .hero__slide .hero__background {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
