@@ -2910,3 +2910,14 @@ img {
 .hero__scroll-indicator {
     bottom: 65px !important;
 }
+
+/* Subir a setinha e as bolinhas somente no celular */
+@media (max-width: 768px) {
+    .hero__scroll-indicator {
+        bottom: 90px !important;
+    }
+
+    .hero__indicators {
+        bottom: 65px !important;
+    }
+}
