@@ -610,11 +610,12 @@ img {
 }
 
 .destinos h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: var(--color-navy);
-  text-align: center;
-  margin-bottom: 0.5rem;
+    font-family: var(--font-display) !important;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy);
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .destinos__subtitle {
@@ -2549,8 +2550,300 @@ img {
     margin-top: 4rem;
 }
 
-.footer__logo img {
-    width: 60px;
-    height: auto;
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVIDADE MOBILE — LCTUR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Evita qualquer conteúdo ultrapassando a tela */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Container principal */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Títulos */
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* =========================
+       DESTINOS
+       ========================= */
+
+    .destinos__grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .destino-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* =========================
+   SOBRE / CARLINHOS — MOBILE
+   ========================= */
+
+.sobre__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px;
+    align-items: center;
+}
+
+.sobre__image,
+.sobre__content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.founder-image {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.founder-image img {
     display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sobre__content {
+    padding: 0;
+    text-align: center;
+}
+
+.sobre__content h2,
+.sobre__content h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.sobre__content .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+}
+
+    /* =========================
+       GALERIA / EXPERIÊNCIAS
+       ========================= */
+
+    .experiencias__grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px;
+    }
+
+    /* =========================
+       BOTÕES
+       ========================= */
+
+    .btn {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* =========================
+       SEÇÕES COM COLUNAS
+       ========================= */
+
+    .lista-viajantes__content,
+    .final-cta__content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+/* Zoom inicial do primeiro slide do hero */
+
+@keyframes heroInitialZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
+
+.hero__slide:first-child.hero__slide--active .hero__background {
+    animation: heroInitialZoom 6s ease-out;
+}
+
+/* Correção da grade de destinos no desktop */
+@media (min-width: 769px) {
+    .destinos__grid,
+    .destinations-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .destinos__grid > *,
+    .destinations-grid > * {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* Esconder o botão do cabeçalho somente no celular */
+@media (max-width: 768px) {
+    .header__cta {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre__content h2 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: normal;
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .sobre__cadastur {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+    }
+
+    .sobre__cadastur .cadastur__separator {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre__cadastur .cadastur__separator {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-viajantes__note {
+        display: block;
+        margin-top: 25px;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-nav {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 1100;
+        background: #0a1628;
+    }
+
+    .menu-toggle {
+        position: relative;
+        z-index: 1101;
+    }
+}
+
+ /* Ícone X quando o menu estiver aberto */
+@media (max-width: 768px) {
+    .menu-toggle.active {
+        transform: none;
+    }
+
+    .menu-toggle.active svg {
+        display: none;
+    }
+
+    .menu-toggle.active::after {
+        content: "×";
+        display: block;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 34px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+
+/* MENU MOBILE BRANCO */
+@media (max-width: 768px) {
+
+    .mobile-nav {
+        background: #ffffff !important;
+    }
+
+    .mobile-nav a {
+        color: #0a1628 !important;
+    }
+
+    .menu-toggle.active {
+        color: #0a1628;
+    }
+
+    .menu-toggle.active::after {
+        color: #0a1628;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-nav .btn {
+        display: none !important;
+    }
+}
+
+/* CABEÇALHO COMPACTO NO CELULAR */
+@media (max-width: 768px) {
+    .header {
+        padding: 0.35rem 0 !important;
+    }
+
+    .header.scrolled .header__container {
+        min-height: 48px !important;
+    }
+
+    .header__logo .logo__image {
+        width: 42px !important;
+    }
+
+    .header.scrolled .header__container {
+        min-height: 40px !important;
+    }
 }
