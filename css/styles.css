@@ -2552,10 +2552,6 @@ img {
 
 
 
-
-
-
-
 /* =========================================================
    RESPONSIVIDADE MOBILE — LCTUR
    ========================================================= */
@@ -2845,5 +2841,15 @@ img {
 
     .header.scrolled .header__container {
         min-height: 40px !important;
+    }
+}
+
+/* Ajuste do conteúdo do hero somente no celular */
+@media (max-width: 768px) {
+    .hero__slide .hero__content {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
 }
