@@ -2921,3 +2921,18 @@ img {
         bottom: 65px !important;
     }
 }
+
+/* CNPJ e Cadastur no rodapé */
+.footer__legal-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .footer__legal-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
