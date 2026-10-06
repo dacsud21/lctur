@@ -446,7 +446,8 @@ img {
   font-weight: 500;
 }
 
-.hero h1 {
+.hero h1,
+.hero h2 {
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 700;
@@ -1768,7 +1769,8 @@ img {
   .menu-toggle {
     display: flex;
   }
-  .hero h1 {
+  .hero h1,
+.hero h2 {
     font-size: clamp(2.5rem, 10vw, 4rem);
   }
   .destinos__grid,
@@ -2081,8 +2083,8 @@ img {
 /* =========================================================
    TÍTULO DOS DESTINOS - HERO
    ========================================================= */
-
-.hero__slide .hero__content h1 {
+.hero__slide .hero__content h1,
+.hero__slide .hero__content h2 {
     font-size: clamp(3.5rem, 7vw, 6rem);
     font-weight: 700;
     line-height: 0.95;
@@ -2935,4 +2937,17 @@ img {
         align-items: flex-start;
         gap: 0.25rem;
     }
+}
+
+/* H1 principal para estrutura semântica e acessibilidade */
+.seo-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
